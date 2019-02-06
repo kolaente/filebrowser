@@ -52,6 +52,10 @@ type FileOptions struct {
 // object will be automatically filled depending on if it is a directory
 // or a file. If it's a video file, it will also detect any subtitles.
 func NewFileInfo(opts FileOptions) (*FileInfo, error) {
+
+	// This would be a good entrypoint for user shared files
+	// Somewhere in this file
+
 	if !opts.Checker.Check(opts.Path) {
 		return nil, os.ErrPermission
 	}
